@@ -62,6 +62,19 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // =========================================
+// SMOOTH SCROLL FOR ALL ANCHOR LINKS
+// =========================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// =========================================
 // SCROLL REVEAL
 // =========================================
 const revealEls = document.querySelectorAll(
@@ -77,7 +90,7 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.05 });
 
 revealEls.forEach(el => observer.observe(el));
 
