@@ -66,11 +66,12 @@ navLinks.querySelectorAll('a').forEach(link => {
 // =========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    e.preventDefault();
+    const id = this.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
     if (target) {
-      e.preventDefault();
       const navHeight = document.getElementById('navbar').offsetHeight;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      const top = target.offsetTop - navHeight;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
