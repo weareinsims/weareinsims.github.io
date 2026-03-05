@@ -146,6 +146,7 @@ section {
   background-size: 60px 60px;
   opacity: 0.3;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-content {
