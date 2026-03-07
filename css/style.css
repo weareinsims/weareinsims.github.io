@@ -748,6 +748,12 @@ section {
   color: var(--text-muted);
 }
 
+.project-status.complete {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
 .project-card h3 {
   font-size: 1rem;
   font-weight: 600;
