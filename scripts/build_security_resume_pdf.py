@@ -12,7 +12,7 @@ from reportlab.platypus import (
 )
 from reportlab.lib import colors
 
-OUT = '/Users/khizarkhan/projects/Portfolio/BaseResume_KhizarKhan.pdf'
+OUT = '/Users/khizarkhan/projects/Portfolio/resumes/KhizarKhan_Resume.pdf'
 
 BLACK = colors.HexColor('#111111')
 DARK  = colors.HexColor('#1a2035')
@@ -89,6 +89,11 @@ s_edu_r = ParagraphStyle('edu_r',
     fontName='Helvetica', fontSize=8.8,
     textColor=DIM, alignment=TA_RIGHT, leading=11.5)
 
+s_summary = ParagraphStyle('summary',
+    fontName='Helvetica', fontSize=8.8,
+    textColor=DARK, alignment=TA_LEFT,
+    spaceBefore=4, spaceAfter=4, leading=12.5)
+
 
 def section(title):
     return [
@@ -151,6 +156,15 @@ story.append(Paragraph(
     s_contact
 ))
 story.append(HRFlowable(width=W, thickness=1.2, color=DARK, spaceAfter=5))
+
+# Summary
+story += section('Summary')
+story.append(Paragraph(
+    'IT professional with enterprise experience in endpoint management, security operations, and infrastructure support. '
+    'Specializes in SCCM/MECM, Microsoft Intune, Active Directory, and PowerShell automation across large-scale Windows environments. '
+    'Holds CompTIA Security+, ISC2 CC, SC-200, and AZ-900 with a degree in Cybersecurity &amp; IT from Toronto Metropolitan University.',
+    s_summary
+))
 
 # Skills
 story += section('Skills')
