@@ -254,6 +254,17 @@ story.append(Spacer(1, 2))
 story += section('Professional Experience')
 
 story.append(job_block(
+    'IT Systems Specialist', 'CDW, Client: Valard Construction', 'March 2026 - Present',
+    [
+        'Manage endpoint compliance through Microsoft Intune, enforcing security baselines across the device fleet and remediating non-compliant machines to meet organizational standards.',
+        'Handle Active Directory user lifecycle with a least-privilege approach, covering provisioning, group access, and M365 license cleanup for joiners and leavers.',
+        'Diagnose and resolve hardware, software, and network malfunctions across office and field sites, escalating connectivity faults with documented root cause analysis.',
+        'Log and track incidents in ServiceNow, keeping tickets updated and resolved within SLA windows.',
+        'Support M365 users across Exchange Online, Teams, and SharePoint, resolving permission errors, sync issues, and access problems.',
+    ]
+))
+
+story.append(job_block(
     'Endpoint Technology Specialist', 'Centennial College', 'Sept 2025 - Feb 2026',
     [
         'Administered <b>SCCM/MECM and Intune</b> across a large enterprise environment managing Windows endpoints for academic and administrative departments.',
