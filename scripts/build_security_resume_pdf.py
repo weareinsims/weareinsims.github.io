@@ -195,6 +195,12 @@ story.append(row_table(
     Paragraph('Sept 2019 - Oct 2024', s_edu_r),
     left_w=5.1 * inch,
 ))
+story.append(Spacer(1, 2))
+story.append(row_table(
+    Paragraph('<b>Security Operations Analyst Program</b> &nbsp;&nbsp; NPower Canada', s_edu),
+    Paragraph('Jan 2025 - Nov 2025', s_edu_r),
+    left_w=5.1 * inch,
+))
 
 # Projects
 story.append(Spacer(1, 2))
